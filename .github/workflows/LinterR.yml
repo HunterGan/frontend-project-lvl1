@@ -1,18 +1,13 @@
 name: Linter CI
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-     
           - name: Install dependencies
             run: make
           - run: make install
