@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: make install
-      - run: make lint
-      - run: make test
+          - name: Install dependencies
+            run: make
+          - run: make install
+          - run: make lint
+          - run: make test
