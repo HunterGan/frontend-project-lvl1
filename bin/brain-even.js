@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import brainQuest from '../src/brain-quest.js';
+import brainQuest from '../games/brain-quest.js';
 
 brainQuest();
