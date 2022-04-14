@@ -8,7 +8,7 @@ export const ishDan = () => {
 };
 
 const brainQuest = () => {
-  const privet = 'What is the result of the expression?';
+  const privet = 'Answer "yes" if the number is even, otherwise answer "no".';
   gameStart(privet, ishDan);
 };
 
