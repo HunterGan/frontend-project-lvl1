@@ -9,10 +9,10 @@ export const ishDan = () => {
   const indMissed = Math.abs(ranNumb(strDlina));
   for (let i = 0; i < strDlina; i += 1) {
     if (i === indMissed) {
-      gameStr += ' ..';
+      gameStr += '.. ';
       propNum = num;
     } else {
-      gameStr += (` ${num}`);
+      gameStr += (`${num} `);
     }
     num += amProgr;
   }
