@@ -17,16 +17,16 @@ Each game is easy to win. You need just to answer right 3 questions in a selecte
 - Add and check dependencies: enter command line: "make install"
 - Run games: enter command line "game name"
 
-#Game list
+# Game list
 
-1.**brain-games** - game with introduction
-2.**brain-even** - check if the number is even
-3.**brain-calc** - calculate simple expressions of 2 numbers
-4.**brain-gcd** - calculate the biggest common divisor of 2 numbers
-5.**brain-prime** - check if the number is prime
-6.**brain-progression** - enter missing number of progression
+1. **brain-games** - game with introduction
+2. **brain-even** - check if the number is even
+3. **brain-calc** - calculate simple expressions of 2 numbers
+4. **brain-gcd** - calculate the biggest common divisor of 2 numbers
+5. **brain-prime** - check if the number is prime
+6. **brain-progression** - enter missing number of progression
 
-#Games overviews:
+# Games overviews:
 
 **brain-even**   
 https://asciinema.org/a/wbk5NQsDbUFfnyGNF187g50qk
