@@ -10,7 +10,7 @@ export const gameStart = (privet, ishDan) => {
   let itog = true;
   for (let i = 0; i < 3; i += 1) {
     const [rightAnsw, gameStr] = ishDan();
-    console.log('Question: ', gameStr);
+    console.log(`Question: ${gameStr}`);
     const answr = readlineSync.question('Your answer: ');
     if (answr === String(rightAnsw)) {
       console.log('Correct!');
