@@ -6,7 +6,7 @@ export const ishDan = () => {
   const num2 = ranNumb(50);
   const operInd = Math.abs(ranNumb(3));
   const oper = znak[operInd];
-  const gameStr = num1 + oper + num2;
+  const gameStr = (`${num1} ${oper} ${num2}`);
   let rightAnsw;
   switch (operInd) {
     case 0:
