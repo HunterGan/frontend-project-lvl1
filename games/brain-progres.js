@@ -5,7 +5,7 @@ export const ishDan = () => {
   let gameStr = '';
   let num = Math.abs(ranNumb(50) + 1);
   let propNum;
-  const strDlina = Math.abs(ranNumb(6) + 5);
+  const strDlina = Math.abs(ranNumb(5) + 6);
   const indMissed = Math.abs(ranNumb(strDlina));
   for (let i = 0; i < strDlina; i += 1) {
     if (i === indMissed) {
