@@ -1,27 +1,20 @@
 import readlineSync from 'readline-sync';
 
-export const ranNumb = (velicina) => Math.floor(Math.random() * velicina);
-
-export const gameStart = (privet, ishDan) => {
+const startGame = (gameQuestion, initialData) => {
   console.log('Welcome to the Brain Games!');
-  const nam = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${nam}!`);
-  console.log(privet);
-  let itog = true;
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hi ${userName}!`);
+  console.log(gameQuestion);
   for (let i = 0; i < 3; i += 1) {
-    const [rightAnsw, gameStr] = ishDan();
-    console.log(`Question: ${gameStr}`);
-    const answr = readlineSync.question('Your answer: ');
-    if (answr === String(rightAnsw)) {
-      console.log('Correct!');
-    } else {
-      itog = false;
-      console.log(`'${answr}' is wrong answer ;(. Correct answer was '${rightAnsw}'`);
-      console.log(`Let's try again, ${nam}!`);
-      break;
-    }
+    const [rightAnswer, gameExpression] = initialData();
+    console.log(`Question: ${gameExpression}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== rightAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    } console.log('Correct!');
   }
-  if (itog === true) {
-    console.log(`Congratulations, ${nam}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
+export default startGame;

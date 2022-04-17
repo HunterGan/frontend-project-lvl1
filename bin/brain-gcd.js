@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import brNod from '../games/brain-nod.js';
+import brainProgression from '../src/games/brain_gcd.js';
 
-brNod();
+brainProgression();
