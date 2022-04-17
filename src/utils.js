@@ -8,7 +8,7 @@ export const getRandomNumber = (minOfRange, maxOfRange) => {
 
 export const checkPrime = (num) => {
   const highRange = Math.sqrt(num);
-  for (let i = 2; i < highRange; i += 1) {
+  for (let i = 2; i <= highRange; i += 1) {
     if (num % i === 0) {
       return false;
     }
