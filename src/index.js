@@ -5,7 +5,8 @@ const startGame = (gameQuestion, initialData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hi ${userName}!`);
   console.log(gameQuestion);
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfGames = 3;
+  for (let i = 0; i < numberOfGames; i += 1) {
     const [rightAnswer, gameExpression] = initialData();
     console.log(`Question: ${gameExpression}`);
     const userAnswer = readlineSync.question('Your answer: ');

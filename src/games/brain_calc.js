@@ -1,17 +1,19 @@
 import startGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-const getCalculation = (num1, num2, operationIndex) => {
+const getCalculation = (num1, num2, operationType) => {
   let calcResult = num1;
-  switch (operationIndex) {
-    case 0:
+  switch (operationType) {
+    case '-':
       calcResult -= num2;
       break;
-    case 1:
+    case '+':
       calcResult += num2;
       break;
-    default:
+    case '*':
       calcResult *= num2;
+      break;
+    default:
       break;
   }
   return calcResult;
@@ -24,7 +26,7 @@ const initialData = () => {
   const operationIndex = getRandomNumber(0, 3);
   const operationType = operations[operationIndex];
   const gameExpression = (`${num1} ${operationType} ${num2}`);
-  const rightAnswer = String(getCalculation(num1, num2, operationIndex));
+  const rightAnswer = String(getCalculation(num1, num2, operationType));
   return [rightAnswer, gameExpression];
 };
 

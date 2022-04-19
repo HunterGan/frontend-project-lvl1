@@ -1,5 +1,7 @@
 import startGame from '../index.js';
-import { getRandomNumber, isNumberEven } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+
+const isNumberEven = (num) => (num % 2 === 1);
 
 const initialData = () => {
   const num = getRandomNumber(1, 100);

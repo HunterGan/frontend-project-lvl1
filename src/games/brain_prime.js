@@ -1,5 +1,15 @@
 import startGame from '../index.js';
-import { checkPrime, getRandomNumber } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+
+const checkPrime = (num) => {
+  const highRange = Math.sqrt(num);
+  for (let i = 2; i <= highRange; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+};
 
 const initialData = () => {
   const num = getRandomNumber(1, 100);

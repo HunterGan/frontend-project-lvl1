@@ -1,5 +1,16 @@
 import startGame from '../index.js';
-import { getRandomNumber, highestDivider } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+
+const highestDivider = (num1, num2) => {
+  let number1 = num1;
+  let number2 = num2;
+  while (number1 !== number2) {
+    if (number1 > number2) {
+      number1 -= number2;
+    } else number2 -= number1;
+  }
+  return number1;
+};
 
 const initialData = () => {
   const num1 = getRandomNumber(1, 50);
